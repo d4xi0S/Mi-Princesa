@@ -36,7 +36,7 @@
   <button id="playBtn">▶︎</button>
   <span style="font-size:12px;opacity:.9">Tu canción favorita aquí, con cariño de Davi 🤍</span>
   <input type="file" id="pickFile" accept="audio/*">
-  <button id="pickBtn">Elegir canción</button>
+   <!-- <button id="pickBtn">Elegir canción</button> -->
   <audio id="audio" preload="auto" autoplay>
     <source src="chacha.mp3" type="audio/mpeg">
   </audio>
@@ -62,14 +62,14 @@ function showError(msg){ err.textContent = msg; err.style.display='block'; }
 // ====== AUDIO ======
 const audio = document.getElementById('audio');
 const playBtn = document.getElementById('playBtn');
-const pickBtn = document.getElementById('pickBtn');
+// const pickBtn = document.getElementById('pickBtn');
 const pickFile = document.getElementById('pickFile');
 
 playBtn.onclick = async () => {
   try { if (audio.paused) { await audio.play(); playBtn.textContent='⏸︎'; } else { audio.pause(); playBtn.textContent='▶︎'; } }
   catch(e){ showError('Si no suena, toca “Elegir canción” y selecciona tu MP3.'); }
 };
-pickBtn.onclick = () => pickFile.click();
+// pickBtn.onclick = () => pickFile.click();
 pickFile.onchange = () => {
   if (pickFile.files && pickFile.files[0]) {
     const url = URL.createObjectURL(pickFile.files[0]);
