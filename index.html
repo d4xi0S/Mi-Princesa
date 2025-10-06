@@ -192,10 +192,10 @@ function makeHaloTexture(size=1024, inner=0.45){
   const c=document.createElement('canvas'); c.width=c.height=size; const g=c.getContext('2d'); const r=size/2;
   const grd=g.createRadialGradient(r,r,r*inner, r,r,r);
   // brighter, clearer colors
-  grd.addColorStop(0.0,'rgba(255,150,200,0.5)');
-  grd.addColorStop(0.35,'rgba(255,100,170,0.35)');
-  grd.addColorStop(0.7,'rgba(200,70,140,0.25)');
-  grd.addColorStop(1,'rgba(0,0,0,0)');
+  grd.addColorStop(0.0,'rgba(255,180,220,0.5)');
+  grd.addColorStop(0.35,'rgba(255,120,190,0.35)');
+  grd.addColorStop(0.7,'rgba(200,80,140,0.25)');
+  grd.addColorStop(1,'rgba(255,50,120,0)');
   g.fillStyle=grd; g.fillRect(0,0,size,size); const tex=new THREE.CanvasTexture(c); tex.needsUpdate=true; return tex;
 }
 const haloPlane=new THREE.Mesh(new THREE.PlaneGeometry(320,320), new THREE.MeshBasicMaterial({ map:makeHaloTexture(1024,0.45), transparent:true, depthWrite:false, blending:THREE.AdditiveBlending, opacity:0.9 }));
