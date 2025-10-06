@@ -188,7 +188,7 @@ grd.addColorStop(0,'#ff66b2'); grd.addColorStop(0.6,'#e05599'); grd.addColorStop
 cg.fillStyle=grd;
 cg.beginPath();
 cg.arc(128,128,128,0,Math.PI*2);
-cg.closePhanth();
+cg.closePath();
 cg.fill();
 const core=new THREE.Mesh(new THREE.SphereGeometry(coreR,64,64), new THREE.MeshBasicMaterial({ map:new THREE.CanvasTexture(coreTexCanvas) }));
 core.renderOrder=1; scene.add(core);
