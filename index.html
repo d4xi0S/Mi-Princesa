@@ -21,6 +21,29 @@
     .pill{position:fixed;top:10px;left:50%;transform:translateX(-50%);padding:6px 12px;border-radius:999px;
           background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff;font:12px -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial}
     .error{position:fixed;inset:auto 10px 70px 10px;background:#260015;color:#ffd9f7;border:1px solid #ff8ae5;border-radius:10px;padding:10px;font:12px system-ui;display:none;}
+  .play-btn {
+  padding: 10px 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+.play-btn:hover {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+.play-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
   </style>
   <!-- Three.js legacy non-module build + OrbitControls (r128, super estable) -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
@@ -33,7 +56,7 @@
 <div id="err" class="error"></div>
 
 <div class="player">
-  <button id="playBtn">▶︎</button>
+  <button id="playBtn" class="play-btn">▶︎</button>
   <span style="font-size:12px;opacity:.9">Tu canción favorita aquí, con cariño de Davi 🤍</span>
   <input type="file" id="pickFile" accept="audio/*">
    <!-- <button id="pickBtn">Elegir canción</button> -->
