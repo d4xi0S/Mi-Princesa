@@ -181,7 +181,7 @@ galaxy.add(new THREE.Points(geom, new THREE.PointsMaterial({ color:0xffffff, siz
 const coreR=12;
 const coreTexCanvas=document.createElement('canvas'); coreTexCanvas.width=coreTexCanvas.height=256;
 const cg=coreTexCanvas.getContext('2d'); const grd=cg.createRadialGradient(128,128,10,128,128,128);
-grd.addColorStop(0,'#ff66b2'); grd.addColorStop(0.6,'#cc3385'); grd.addColorStop(1,'#000'); cg.fillStyle=grd; cg.arc(128,128,128,0,Math.PI*2); cg.fill();
+grd.addColorStop(0,'#ff66b2'); grd.addColorStop(0.6,'#e05599'); grd.addColorStop(1,'#b33c7d'); cg.fillStyle=grd; cg.arc(128,128,128,0,Math.PI*2); cg.fill();
 const core=new THREE.Mesh(new THREE.SphereGeometry(coreR,64,64), new THREE.MeshBasicMaterial({ map:new THREE.CanvasTexture(coreTexCanvas) }));
 core.renderOrder=1; scene.add(core);
 
